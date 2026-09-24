@@ -13,6 +13,8 @@
     { name: "Adv. Ankita Jha", role: "LEGAL PRACTITIONER", img: "/assets/images/ankitaImage.webp" },
     { name: "Neelam ", role: "Advocate", img: "/assets/images/neelamImage.webp" },
     { name: "Ishu Bharti Jha", role: "MANAGER · ASSOCIATE", img: "/assets/images/ishuImage.webp" },
+    { name: "Anshu Kumar Upadhyay", role: "ADVOCATE", img: "/assets/images/anshuImage.webp" },
+    { name: "Dharamveer Singh Chauhan", role: "ACCOUNTS · Tax PROFESSIONAL", img: "/assets/images/dharamveerImage.webp" },
     { name: "CA (Dr.) Sunil Goel", role: "CONSULTANT · CONTRACTS, COMPLIANCE & INVESTIGATIONS", img: "/assets/images/sunilImage.webp" },
     { name: "Saurabh Sharma", role: "CONSULTANT · BANKING & FINANCIAL SERVICES", img: "/assets/images/saurabhImage.webp" },
     { name: "Anuj Dalmia", role: "CONSULTANT · START-UP & TRANSACTION ADVISORY", img: "/assets/images/anujImage.webp" },
