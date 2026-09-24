@@ -17,9 +17,9 @@
 
 // ===================== EDIT THESE FOUR VALUES =====================
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'u925204098_project1');
-define('DB_USER', 'u925204098_project1db');
-define('DB_PASS', '@dityaAD7');
+define('DB_NAME', 'u925204098_adalawchamber');
+define('DB_USER', 'u925204098_adalawchamber');
+define('DB_PASS', 'adalawchamber@DB1');
 // ====================================================================
 
 // A random secret used only once, by api/setup-admin.php, to create
