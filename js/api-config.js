@@ -25,5 +25,5 @@ var API_BASE_URL = "/api";
 
    Format: digits only, country code first, no + or spaces.
 =================================================================== */
-var WHATSAPP_NOTIFY_NUMBER = "919999999999";
+var WHATSAPP_NOTIFY_NUMBER = "918796630295";
 
