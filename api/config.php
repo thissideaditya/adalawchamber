@@ -25,11 +25,11 @@ define('DB_PASS', 'adalawchamber@DB1');
 // A random secret used only once, by api/setup-admin.php, to create
 // your first admin login. Change this to your own random string
 // before uploading, then see api/setup-admin.php for how it's used.
-// https://hotpink-bee-886033.hostingersite.com/api/setup-admin.php?secret=LoremIpsumissimplydummytextoftheprintingandtypesetting&email=admin@adalawchamber.com&password=@AdaPass123
+// https://darkorchid-herring-326698.hostingersite.com/api/setup-admin.php?secret=ylwBjUZ1I2uCQqsQZrzPYVoIl5LBmMx7PZAdBXWp5Pc&email=admin@adalawchamber.com&password=@AdaPass123
 // email=admin@adalawchamber.com
 // password=@AdaPass123
 
-define('SETUP_SECRET', 'LoremIpsumissimplydummytextoftheprintingandtypesetting');
+define('SETUP_SECRET', 'ylwBjUZ1I2uCQqsQZrzPYVoIl5LBmMx7PZAdBXWp5Pc');
 
 
 // Where uploaded files are stored on the server (resumes + post images)
