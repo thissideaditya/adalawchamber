@@ -131,6 +131,7 @@ function h($str) {
 <script src="js/main.js"></script>
 <script src="js/api-config.js"></script>
 <script src="js/hostinger-client.js"></script>
-<script src="js/posts-render.js?v=5"></script>
+<script src="js/share.js?v=1"></script>
+<script src="js/posts-render.js?v=6"></script>
 </body>
 </html>

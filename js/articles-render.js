@@ -36,7 +36,10 @@
           '<span class="meta">' + escapeHtml(fileTypeLabel(article.file_type)) + " &middot; " + formatDate(article.created_at) + "</span>" +
           "<h3>" + escapeHtml(article.title) + "</h3>" +
           (article.description ? "<p>" + escapeHtml(article.description) + "</p>" : "") +
-          '<a class="btn btn--sm btn--gold" href="' + escapeHtml(article.file_url) + '" download="' + escapeHtml(fileName) + '" style="margin-top:.75rem;align-self:flex-start;">Download &darr;</a>' +
+          '<div class="card-actions" style="justify-content:flex-start;">' +
+            '<a class="btn btn--sm btn--gold" href="' + escapeHtml(article.file_url) + '" download="' + escapeHtml(fileName) + '">Download &darr;</a>' +
+            (window.ADA_SHARE ? window.ADA_SHARE.button(article.file_url, article.title) : "") +
+          '</div>' +
         "</div>" +
       "</article>"
     );

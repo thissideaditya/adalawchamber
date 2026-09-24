@@ -21,6 +21,10 @@
     }
   }
 
+  function shareButton(url, title) {
+    return window.ADA_SHARE ? window.ADA_SHARE.button(url, title) : "";
+  }
+
   function postCard(post, basePath) {
     var label = post.category === "rule" ? "Rules" : "Thoughts";
     return (
@@ -32,7 +36,10 @@
           '<span class="meta">' + label + " | " + formatDate(post.created_at) + "</span>" +
           "<h3>" + escapeHtml(post.title) + "</h3>" +
           "<p>" + escapeHtml(post.excerpt) + "</p>" +
-          '<a class="read-more" href="' + basePath + 'post.php?slug=' + encodeURIComponent(post.slug) + '">Read more &rarr;</a>' +
+          '<div class="card-actions">' +
+            '<a class="read-more" href="' + basePath + 'post.php?slug=' + encodeURIComponent(post.slug) + '">Read more &rarr;</a>' +
+            shareButton(basePath + 'post.php?slug=' + encodeURIComponent(post.slug), post.title) +
+          '</div>' +
         "</div>" +
       "</article>"
     );
@@ -87,6 +94,7 @@
         '<header class="article-header">' +
           '<span class="eyebrow">' + label + " | " + formatDate(post.created_at) + "</span>" +
           "<h1>" + escapeHtml(post.title) + "</h1>" +
+          '<div style="margin-top:1rem;">' + shareButton(window.location.href, post.title) + "</div>" +
         "</header>" +
         '<img src="' + escapeHtml(post.cover_image) + '" alt="" style="border-radius:6px;margin-bottom:2.5rem;max-height:420px;object-fit:cover;width:100%;">' +
         '<div class="article-body">' + contentHtml + "</div>";
