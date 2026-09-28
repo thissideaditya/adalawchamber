@@ -34,7 +34,7 @@
       '<article class="post-card">' +
         '<div class="body">' +
           '<span class="meta">' + escapeHtml(fileTypeLabel(article.file_type)) + " &middot; " + formatDate(article.created_at) + "</span>" +
-          "<h3>" + escapeHtml(article.title) + "</h3>" +
+          '<h3><a class="article-title-link" href="' + escapeHtml(article.file_url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(article.title) + '</a></h3>' +
           (article.description ? "<p>" + escapeHtml(article.description) + "</p>" : "") +
           '<div class="card-actions" style="justify-content:flex-start;">' +
             '<a class="btn btn--sm btn--gold" href="' + escapeHtml(article.file_url) + '" download="' + escapeHtml(fileName) + '">Download &darr;</a>' +
