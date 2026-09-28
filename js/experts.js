@@ -11,8 +11,8 @@
     { name: "Ashu Dalmia", role: "FOUNDER · CHARTERED ACCOUNTANT & ADVOCATE", img: "/assets/images/ashuImage.webp" },
     { name: "Smita Raj", role: "Tax PROFESSIONAL", img: "/assets/images/smitaImage.webp" },
     { name: "Adv. Ankita Jha", role: "LEGAL PRACTITIONER", img: "/assets/images/ankitaImage.webp" },
-    { name: "Neelam ", role: "Advocate", img: "/assets/images/neelamImage.webp" },
     { name: "Ishu Bharti Jha", role: "MANAGER · ASSOCIATE", img: "/assets/images/ishuImage.webp" },
+    { name: "Neelam ", role: "Advocate", img: "/assets/images/neelamImage.webp" },
     { name: "Anshu Kumar Upadhyay", role: "ADVOCATE", img: "/assets/images/anshuImage.webp" },
     { name: "Dharamveer Singh Chauhan", role: "ACCOUNTS · Tax PROFESSIONAL", img: "/assets/images/dharamveerImage.webp" },
     { name: "CA (Dr.) Sunil Goel", role: "CONSULTANT · CONTRACTS, COMPLIANCE & INVESTIGATIONS", img: "/assets/images/sunilImage.webp" },
@@ -30,7 +30,10 @@
   function render() {
     var mount = document.getElementById("experts-grid");
     if (!mount) return;
-    mount.innerHTML = EXPERTS.map(function (e) {
+    var HOME_LIMIT = 3;
+    var onHome = mount.hasAttribute("data-limit-home");
+    var list = onHome ? EXPERTS.slice(0, HOME_LIMIT) : EXPERTS;
+    mount.innerHTML = list.map(function (e) {
       return (
         '<div class="team-card">' +
           '<div class="team-photo"><img src="' + e.img + '" alt="' + escapeHtml(e.name) + '" loading="lazy"></div>' +

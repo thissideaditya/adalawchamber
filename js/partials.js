@@ -29,8 +29,8 @@
   }
 
   Promise.all([
-    inject("site-header-slot", "partials/header.html"),
-    inject("site-footer-slot", "partials/footer.html"),
+    inject("site-header-slot", "partials/header.html?v=" + Date.now()),
+    inject("site-footer-slot", "partials/footer.html?v=" + Date.now()),
   ]).then(function () {
     // main.js listens for this to run nav toggling, active-link
     // highlighting, and the footer year — all of which need the
