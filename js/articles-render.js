@@ -50,7 +50,13 @@
     if (!mount) return;
 
     try {
-      var articles = await window.ADA.data.fetchArticles();
+      // Never hang on "Loading…": give up after 15s and show a clear message.
+      var articles = await Promise.race([
+        window.ADA.data.fetchArticles(),
+        new Promise(function (_, reject) {
+          setTimeout(function () { reject(new Error("Timed out waiting for /api/articles.php")); }, 15000);
+        }),
+      ]);
       if (!articles || articles.length === 0) {
         mount.innerHTML = '<div class="empty-state">No articles published yet. Please check back soon.</div>';
         return;
@@ -63,5 +69,12 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", renderArticles);
+  // Run now if the page has already finished parsing (some hosts/optimisers
+  // delay scripts until after DOMContentLoaded, so a listener alone can
+  // miss it and leave the page stuck on "Loading…").
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderArticles);
+  } else {
+    renderArticles();
+  }
 })();
