@@ -28,13 +28,28 @@
     return t.toUpperCase();
   }
 
+  // PDFs open directly (every browser can render them). Office files
+  // (ppt/pptx/doc/docx) can't be viewed by the browser itself, so they're
+  // routed through Microsoft's free Office viewer, which needs the file's
+  // FULL absolute URL (not a relative path) to fetch and render it.
+  function viewerUrl(article) {
+    var absoluteUrl = new URL(article.file_url, window.location.href).href;
+    var type = (article.file_type || "").toLowerCase();
+    if (type === "pdf") return absoluteUrl;
+    if (["ppt", "pptx", "doc", "docx"].indexOf(type) !== -1) {
+      return "https://view.officeapps.live.com/op/view.aspx?src=" + encodeURIComponent(absoluteUrl);
+    }
+    return absoluteUrl;
+  }
+
   function articleCard(article) {
     var fileName = (article.file_url || "").split("/").pop() || "download";
+    var openUrl = viewerUrl(article);
     return (
       '<article class="post-card">' +
         '<div class="body">' +
           '<span class="meta">' + escapeHtml(fileTypeLabel(article.file_type)) + " &middot; " + formatDate(article.created_at) + "</span>" +
-          '<h3><a class="article-title-link" href="' + escapeHtml(article.file_url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(article.title) + '</a></h3>' +
+          '<h3><a class="article-title-link" href="' + escapeHtml(openUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(article.title) + "</a></h3>" +
           (article.description ? "<p>" + escapeHtml(article.description) + "</p>" : "") +
           '<div class="card-actions" style="justify-content:flex-start;">' +
             '<a class="btn btn--sm btn--gold" href="' + escapeHtml(article.file_url) + '" download="' + escapeHtml(fileName) + '">Download &darr;</a>' +
