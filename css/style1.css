@@ -5,7 +5,7 @@
 =================================================================== */
 
 :root {
-  /* ---- Brand palette (from logo: deep green + gold) ---- */
+  /* ---- Brand palette ---- */
   --green-950: #0b2118;
   --green-900: #0f3324;
   --green-800: #164534;
@@ -43,7 +43,7 @@
 RESET
 --------------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 116%; }
+html { scroll-behavior: smooth; font-size: 110%; }
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -63,7 +63,7 @@ input, textarea, select { font-family: inherit; }
 :focus-visible { outline: 3px solid var(--gold-500); outline-offset: 2px; }
 
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
-.section { padding: clamp(4.5rem, 9vw, 8rem) 0; }
+.section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
 .section--tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
 .section--band { background: var(--green-950); color: var(--cream-100); }
 .section--band h2, .section--band h3 { color: var(--cream-50); }
@@ -86,7 +86,7 @@ input, textarea, select { font-family: inherit; }
 .section-head { max-width: 640px; margin-bottom: 2.75rem; }
 .section-head--center { margin-left: auto; margin-right: auto; text-align: center; }
 h2.section-title { font-size: clamp(1.9rem, 3.4vw, 2.6rem); }
-.lede { font-size: 1.16rem; line-height: 1.7; color: var(--ink-700); }
+.lede { font-size: 1.08rem; color: var(--ink-700); }
 
 .btn {
   display: inline-flex;
@@ -255,14 +255,12 @@ body.disclaimer-active > *:not(.disclaimer-overlay) { filter: blur(6px); }
 .card {
   background: var(--white); border: 1px solid var(--line); border-left: 3px solid var(--gold-500);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  padding: 2.1rem 2.2rem; min-height: 160px;
-  display: flex; flex-direction: column; justify-content: center;
-  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  padding: 1.75rem 1.9rem; transition: transform .25s var(--ease), box-shadow .25s var(--ease);
 }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
 .card .num { font-family: var(--font-caption); color: var(--gold-600); font-size: .78rem; display: block; margin-bottom: .8rem; }
 .card h3 { font-size: 1.08rem; margin-bottom: .5rem; }
-.card p { color: var(--ink-700); font-size: 1rem; line-height: 1.6; margin-bottom: 0; }
+.card p { color: var(--ink-700); font-size: .92rem; margin-bottom: 0; }
 
 /* Optional icon medallion for cards — pair with .card-head to sit icon + title side by side */
 .card-head { display: flex; align-items: center; gap: .9rem; margin-bottom: .7rem; }
@@ -441,6 +439,11 @@ body.disclaimer-active > *:not(.disclaimer-overlay) { filter: blur(6px); }
   .footer-bottom { justify-content: center; text-align: center; }
 }
 
+.nav-item-row { display: flex; align-items: center; gap: .35rem; }
+.dropdown-icon { width: 10px; height: 10px; flex-shrink: 0; transition: transform .15s ease; }
+.has-dropdown:hover .dropdown-icon,
+.has-dropdown.open .dropdown-icon { transform: rotate(180deg); }
+
 /* ---------------------------------------------------------------
    FORMS (contact / careers / admin)
 --------------------------------------------------------------- */
@@ -529,10 +532,10 @@ body.disclaimer-active > *:not(.disclaimer-overlay) { filter: blur(6px); }
 .post-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; }
 .post-card .thumb { aspect-ratio: 16/10; overflow: hidden; }
 .post-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
-.post-card .body { padding: 1.6rem 1.7rem 1.9rem; flex: 1; display: flex; flex-direction: column; min-height: 190px; }
+.post-card .body { padding: 1.3rem 1.4rem 1.6rem; flex: 1; display: flex; flex-direction: column; }
 .post-card .meta { font-family: var(--font-caption); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-700); margin-bottom: .6rem; }
 .post-card h3 { font-size: 1.05rem; margin-bottom: .5rem; }
-.post-card p { color: var(--ink-700); font-size: .96rem; line-height: 1.6; margin-bottom: 1rem; }
+.post-card p { color: var(--ink-700); font-size: .89rem; margin-bottom: 1rem; }
 .post-card .read-more { margin-top: auto; font-size: .82rem; font-weight: 700; color: var(--green-800); }
 .empty-state { text-align: center; padding: 3rem 1rem; color: var(--ink-500); border: 1px dashed var(--line); border-radius: var(--radius-md); }
 
