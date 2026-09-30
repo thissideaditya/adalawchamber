@@ -17,16 +17,16 @@
 
 // ===================== EDIT THESE FOUR VALUES =====================
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'u925204098_adalawdatabase');
-define('DB_USER', 'u925204098_adalawusername');
-define('DB_PASS', 'adalawchambers@DB1');
+define('DB_NAME', 'u925204098_adalawchamber');
+define('DB_USER', 'u925204098_adalawchamber');
+define('DB_PASS', 'adalawchamber@DB1');
 // ====================================================================
 
 // A random secret used only once, by api/setup-admin.php, to create
 // your first admin login. Change this to your own random string
 // before uploading, then see api/setup-admin.php for how it's used.
-// https://darkorchid-herring-326698.hostingersite.com/api/setup-admin.php?secret=ylwBjUZ1I2uCQqsQZrzPYVoIl5LBmMx7PZAdBXWp5Pc&email=admin@adalawchambers.com&password=@AdaPass123
-// email=admin@adalawchambers.com
+// https://darkorchid-herring-326698.hostingersite.com/api/setup-admin.php?secret=ylwBjUZ1I2uCQqsQZrzPYVoIl5LBmMx7PZAdBXWp5Pc&email=admin@adalawchamber.com&password=@AdaPass123
+// email=admin@adalawchamber.com
 // password=@AdaPass123
 
 define('SETUP_SECRET', 'ylwBjUZ1I2uCQqsQZrzPYVoIl5LBmMx7PZAdBXWp5Pc');
@@ -34,8 +34,33 @@ define('SETUP_SECRET', 'ylwBjUZ1I2uCQqsQZrzPYVoIl5LBmMx7PZAdBXWp5Pc');
 
 // Where uploaded files are stored on the server (resumes + post images)
 // and the public URL prefix used to link to them from the site.
+// KEPT for backward compatibility with any code that still reads it —
+// no longer used for NEW uploads, see PERSIST_DIR below.
 define('UPLOAD_DIR', __DIR__ . '/../uploads');
 define('UPLOAD_URL_BASE', '/uploads');
+
+// ---------------------------------------------------------------
+// PERSISTENT UPLOAD STORAGE — survives GitHub redeploys
+// ---------------------------------------------------------------
+// Hostinger's git deployment only manages the contents of
+// public_html (confirmed in hPanel: "Root directory: public_html").
+// Anything saved INSIDE public_html/uploads gets wiped on every
+// redeploy, because it isn't part of the git repo. Files saved here
+// instead — one level ABOVE public_html — are completely outside
+// what git deployment touches, so they survive redeploys forever.
+// $_SERVER['DOCUMENT_ROOT'] is public_html's real server path;
+// dirname() of that is the folder directly above it.
+define('PERSIST_DIR', dirname($_SERVER['DOCUMENT_ROOT']) . '/persistent-uploads');
+foreach (['articles', 'resources', 'posts', 'resumes'] as $__sub) {
+    $__path = PERSIST_DIR . '/' . $__sub;
+    if (!is_dir($__path)) {
+        mkdir($__path, 0755, true);
+    }
+}
+// Files are served through api/media.php?type=...&file=... rather
+// than a direct URL, since PERSIST_DIR sits outside the web root
+// and has no URL of its own.
+define('MEDIA_URL_BASE', '/api/media.php');
 
 // Allowed resume file types for Careers applications
 define('RESUME_ALLOWED_EXT', ['pdf', 'docx']);

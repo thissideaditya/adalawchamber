@@ -36,7 +36,9 @@ if (!in_array($mime, ARTICLE_ALLOWED_MIME, true)) {
     json_error(400, 'File does not look like a valid document.');
 }
 
-$dir = UPLOAD_DIR . '/articles';
+// Saved to PERSIST_DIR (outside public_html) so this file survives
+// every future GitHub redeploy — see config.php for why.
+$dir = PERSIST_DIR . '/articles';
 if (!is_dir($dir)) {
     mkdir($dir, 0755, true);
 }
@@ -49,6 +51,6 @@ if (!move_uploaded_file($file['tmp_name'], $destination)) {
 }
 
 json_ok([
-    'url' => UPLOAD_URL_BASE . '/articles/' . $filename,
+    'url' => MEDIA_URL_BASE . '?type=articles&file=' . urlencode($filename),
     'file_type' => $ext,
 ]);
