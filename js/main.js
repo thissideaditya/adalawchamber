@@ -78,7 +78,10 @@
       toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
 
-    // Mobile dropdown (Insights > Rules/Thoughts) taps to expand instead of hover
+    // Mobile dropdown (About/Insights) — tap the label OR the arrow to
+    // expand. Listening on .nav-item-row (the wrapper around both the
+    // link text and the arrow icon), rather than just the <a>, means a
+    // tap anywhere in that row opens the dropdown.
     document.querySelectorAll(".has-dropdown").forEach(function (li) {
       var row = li.querySelector(".nav-item-row");
       var dropdown = li.querySelector(".dropdown");
@@ -104,6 +107,7 @@
         nav.classList.remove("open");
       });
     });
+  }
 
   /* -------------------------------------------------------------
      3. ACTIVE LINK HIGHLIGHTING
