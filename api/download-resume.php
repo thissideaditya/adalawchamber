@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/download-resume.php
+ * ADA LAW Chambers — api/download-resume.php
  * ---------------------------------------------------------------
  * GET ?id=<career_applications.id>  (admin only)
  * Streams the resume attached to that application, using the

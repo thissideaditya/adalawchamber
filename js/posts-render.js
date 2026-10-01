@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER - posts-render.js
+   ADA LAW Chambers - posts-render.js
    Renders Supabase/local post data into the Rules, Thoughts and
    single-article pages. Reusable across all three via data-category
    / data-mode attributes set on <body>.
@@ -82,7 +82,7 @@
         mount.innerHTML = '<div class="empty-state">This article could not be found. It may have been unpublished.</div>';
         return;
       }
-      document.title = post.title + " - ADA Law Chamber";
+      document.title = post.title + " - ADA Law Chambers";
       var label = post.category === "rule" ? "Rules" : "Thoughts";
       // Content is authored by the admin via the rich-text editor and
       // saved as HTML (bold/italic/headings/font size), so it's

@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER — resources-render.js
+   ADA LAW Chambers — resources-render.js
    Renders the public Resources page (resources.html), grouping the
    flat list the API returns into Category -> Subcategory sections.
    Mirrors links-render.js's row style for each individual resource.

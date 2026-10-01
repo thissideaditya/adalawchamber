@@ -1,4 +1,4 @@
-# ADA LAW CHAMBER — cache control
+# ADA LAW Chambers — cache control
 #
 # Problem this solves: browsers cache .css and .js files aggressively
 # by default, so after uploading an updated admin.js or style.css to

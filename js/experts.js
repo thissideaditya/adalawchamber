@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER — experts.js
+   ADA LAW Chambers — experts.js
    Placeholder roster for the "Meet Our Experts" section. Swap the
    name/role/img fields below to update the section site-wide —
    nothing else in the codebase needs to change.

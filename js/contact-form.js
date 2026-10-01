@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER — contact-form.js
+   ADA LAW Chambers — contact-form.js
    ---------------------------------------------------------------
    Submits the Contact Us form to the Hostinger database via
    api/contact.php (see /api/contact.php and api/schema.sql →
@@ -14,7 +14,7 @@
    Requires js/api-config.js to be loaded first.
 =================================================================== */
 
-var CONTACT_RECEIVING_EMAIL = "contact@adalawchamber.com";
+var CONTACT_RECEIVING_EMAIL = "contact@adalawChambers.com";
 
 (function () {
   "use strict";

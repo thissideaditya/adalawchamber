@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER — share.js
+   ADA LAW Chambers — share.js
    Adds a "Share" button (Copy link / WhatsApp / Email) to Rules,
    Thoughts, the single-post page and Articles.
 

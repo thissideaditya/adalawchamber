@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER — admin.js
+   ADA LAW Chambers — admin.js
    Handles login, route-guarding, and the create/edit/delete flows
    for Rules & Thoughts posts. Talks only to window.ADA.data, so it
    works identically against the local mock store or real Supabase.

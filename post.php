@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — post.php
+ * ADA LAW Chambers — post.php
  * ---------------------------------------------------------------
  * Same visible page as the old post.html, but the <title> and the
  * social-share tags (og:title, og:image, etc.) are now filled in
@@ -42,7 +42,7 @@ if ($slug !== '') {
 
 // ---- Work out what to put in the tags -------------------------------
 $siteName = 'ADA Law Chambers';
-$baseUrl  = 'https://adalawchambers.com'; // update if your live domain differs
+$baseUrl  = 'https://adalawChambers.com'; // update if your live domain differs
 
 if ($post) {
     $pageTitle = $post['title'] . ' — ' . $siteName;
@@ -103,9 +103,9 @@ function h($str) {
   <div class="disclaimer-card" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
     <img src="assets/images/logo-footer.webp" alt="" class="crest">
     <h2 id="disclaimer-title">Disclaimer</h2>
-    <p>The contents of this website (adalawchamber.com) are for general informational purposes only and do not constitute legal advice. ADA Law Chamber does not solicit work or advertise through this website as per the rules of the Bar Council of India.</p>
-    <p>By accessing this website, you confirm that you are doing so voluntarily and on your own accord, that there has been no form of solicitation, advertisement, or inducement by ADA Law Chamber or its members. No attorney-client relationship is established by merely viewing this website or through any online communication. You should consult a qualified advocate for any specific legal advice.</p>
-    <p>ADA Law Chamber shall not be liable for any consequences arising from the use of information provided on this website.</p>
+    <p>The contents of this website (adalawChambers.com) are for general informational purposes only and do not constitute legal advice. ADA Law Chambers does not solicit work or advertise through this website as per the rules of the Bar Council of India.</p>
+    <p>By accessing this website, you confirm that you are doing so voluntarily and on your own accord, that there has been no form of solicitation, advertisement, or inducement by ADA Law Chambers or its members. No attorney-client relationship is established by merely viewing this website or through any online communication. You should consult a qualified advocate for any specific legal advice.</p>
+    <p>ADA Law Chambers shall not be liable for any consequences arising from the use of information provided on this website.</p>
     <div class="disclaimer-actions">
       <button class="btn btn--gold" id="disclaimer-agree">I Agree</button>
     </div>

@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/resources.php
+ * ADA LAW Chambers — api/resources.php
  * ---------------------------------------------------------------
  * PUBLIC (no login required):
  *   GET                          -> every resource, grouped for display

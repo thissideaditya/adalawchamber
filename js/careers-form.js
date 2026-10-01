@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER — careers-form.js
+   ADA LAW Chambers — careers-form.js
    ---------------------------------------------------------------
    Submits both the Internship and Associate application forms on
    careers.html — including the resume file, if attached — to the

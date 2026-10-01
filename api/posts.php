@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/posts.php
+ * ADA LAW Chambers — api/posts.php
  * ---------------------------------------------------------------
  * Rules & Thoughts posts, backed by MySQL.
  *

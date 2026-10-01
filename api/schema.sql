@@ -1,5 +1,5 @@
 -- =====================================================================
--- ADA LAW CHAMBER — api/schema.sql
+-- ADA LAW Chambers — api/schema.sql
 -- MySQL schema for Hostinger hosting.
 --
 -- HOW TO USE

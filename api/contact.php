@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/contact.php
+ * ADA LAW Chambers — api/contact.php
  * ---------------------------------------------------------------
  * POST (JSON body): { name, email, phone, subject, message }
  * Stores the message in contact_messages. View submissions any time

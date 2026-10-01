@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/articles.php
+ * ADA LAW Chambers — api/articles.php
  * ---------------------------------------------------------------
  * Articles section — downloadable Articles/PPTs/Presentations,
  * backed by MySQL. Mirrors api/posts.php's pattern.

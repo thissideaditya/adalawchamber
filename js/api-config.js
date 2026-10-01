@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER — api-config.js
+   ADA LAW Chambers — api-config.js
    ---------------------------------------------------------------
    One setting: where the PHP API (the /api folder) lives relative
    to this site. On Hostinger, if you upload the whole project
@@ -8,7 +8,7 @@
    need to change anything.
 
    If your API ever lives on a different domain/subdomain, change
-   this to the full URL, e.g. "https://api.adalawchamber.com".
+   this to the full URL, e.g. "https://api.adalawChambers.com".
 =================================================================== */
 var API_BASE_URL = "/api";
 

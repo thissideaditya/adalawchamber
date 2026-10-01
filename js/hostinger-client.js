@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER — hostinger-client.js
+   ADA LAW Chambers — hostinger-client.js
    ---------------------------------------------------------------
    Talks to the PHP + MySQL backend in /api. This provides the same
    window.ADA.data interface that posts-render.js and admin.js

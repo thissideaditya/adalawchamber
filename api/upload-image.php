@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/upload-image.php
+ * ADA LAW Chambers — api/upload-image.php
  * ---------------------------------------------------------------
  * POST (multipart/form-data, field name "image") — admin only.
  * Saves the uploaded picture into /uploads/posts/ and returns its

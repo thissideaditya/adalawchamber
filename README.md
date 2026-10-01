@@ -1,13 +1,13 @@
-# ADA Law Chamber — Website
+# ADA Law Chambers — Website
 
-A fully responsive HTML/CSS/JS website for ADA Law Chamber, with an admin
+A fully responsive HTML/CSS/JS website for ADA Law Chambers, with an admin
 panel for managing the **Rules** and **Thoughts** sections, backed by a
 PHP + MySQL API built for **Hostinger** hosting.
 
 ## Structure
 
 ```
-ada-law-chamber/
+ada-law-Chambers/
 ├── index.html, about.html, practice-areas.html, team.html, pro-bono.html,
 │   insights.html, rules.html, thoughts.html, post.html, careers.html,
 │   contact.html                Public pages
@@ -44,7 +44,7 @@ ada-law-chamber/
 No build step is required for the static pages:
 
 ```
-cd ada-law-chamber
+cd ada-law-Chambers
 python3 -m http.server 8080
 ```
 
@@ -119,7 +119,7 @@ phpMyAdmin — so there's a one-time setup script for this:
 
 1. In your browser, visit:
    ```
-   https://yourdomain.com/api/setup-admin.php?secret=YOUR_SETUP_SECRET&email=admin@adalawchamber.com&password=ChooseAStrongPassword123
+   https://yourdomain.com/api/setup-admin.php?secret=YOUR_SETUP_SECRET&email=admin@adalawChambers.com&password=ChooseAStrongPassword123
    ```
    using the `SETUP_SECRET` you set in Step 4, and your own email/password.
 2. You should see `{"ok":true,...}` in the browser. That's your admin

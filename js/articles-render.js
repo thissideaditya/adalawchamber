@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER — articles-render.js
+   ADA LAW Chambers — articles-render.js
    Renders the public Articles listing (downloadable PPT/PDF/Doc
    files) on articles.html. Mirrors links-render.js's pattern.
 =================================================================== */

@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/upload-file.php
+ * ADA LAW Chambers — api/upload-file.php
  * ---------------------------------------------------------------
  * POST (multipart/form-data, field name "file") — admin only.
  * Saves an uploaded Article/PPT/PDF/Doc file into /uploads/articles/

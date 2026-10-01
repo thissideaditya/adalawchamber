@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/careers.php
+ * ADA LAW Chambers — api/careers.php
  * ---------------------------------------------------------------
  * POST (multipart/form-data) — used by both the Internship and
  * Associate application forms on careers.html.
@@ -105,4 +105,4 @@ $stmt->execute([
     $resumePath, $resumeOriginalName,
 ]);
 
-json_ok(['message' => 'Application received. Thank you — our chamber will reach out if there is a fit.'], 201);
+json_ok(['message' => 'Application received. Thank you — our Chambers will reach out if there is a fit.'], 201);

@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/messages.php
+ * ADA LAW Chambers — api/messages.php
  * ---------------------------------------------------------------
  * GET (admin only) — list every Contact Us submission, newest first.
  * ---------------------------------------------------------------

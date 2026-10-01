@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/applications.php
+ * ADA LAW Chambers — api/applications.php
  * ---------------------------------------------------------------
  * GET (admin only) — list every Careers application (internship and
  * associate), newest first. Use api/download-resume.php?id= to

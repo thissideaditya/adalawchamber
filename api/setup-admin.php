@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/setup-admin.php
+ * ADA LAW Chambers — api/setup-admin.php
  * ---------------------------------------------------------------
  * Run this ONCE, from your browser, to create your first admin
  * login (or reset one) — then DELETE this file. It exists because
@@ -12,7 +12,7 @@
  * 2. Visit, in your browser:
  *      https://yourdomain.com/api/setup-admin.php
  *        ?secret=YOUR_SETUP_SECRET
- *        &email=admin@adalawchamber.com
+ *        &email=admin@adalawChambers.com
  *        &password=ChooseAStrongPassword123
  * 3. You should see {"ok":true,...}. Your admin login now works at
  *    /admin/.

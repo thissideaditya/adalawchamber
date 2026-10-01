@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/media.php
+ * ADA LAW Chambers — api/media.php
  * ---------------------------------------------------------------
  * Streams uploaded files (articles, resources, post images, resumes)
  * from PERSIST_DIR — a folder that sits OUTSIDE public_html, one

@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER — links-render.js
+   ADA LAW Chambers — links-render.js
    Renders the public Important Links list on important-links.html.
 =================================================================== */
 (function () {

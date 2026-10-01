@@ -1,5 +1,5 @@
 /* ===================================================================
-   ADA LAW CHAMBER — partials.js
+   ADA LAW Chambers — partials.js
    Loads the shared header and footer from /partials/ so every page
    stays in sync automatically. To change the header or footer on
    every page at once, edit ONLY these two files:

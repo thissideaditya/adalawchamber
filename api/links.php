@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/links.php
+ * ADA LAW Chambers — api/links.php
  * ---------------------------------------------------------------
  * PUBLIC (no login required):
  *   GET                          -> every link, ordered for display

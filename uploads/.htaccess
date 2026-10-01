@@ -1,4 +1,4 @@
-# ADA LAW CHAMBER — security hardening for /uploads
+# ADA LAW Chambers — security hardening for /uploads
 # This folder only ever holds files uploaded by visitors (resumes)
 # and admins (post images). Even though api/careers.php and
 # api/upload-image.php validate file type and content, this is a

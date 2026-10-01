@@ -1,6 +1,6 @@
 <?php
 /**
- * ADA LAW CHAMBER — api/auth.php
+ * ADA LAW Chambers — api/auth.php
  * ---------------------------------------------------------------
  * POST ?action=login   { email, password }  -> logs in, sets a session
  * POST ?action=logout                       -> logs out
