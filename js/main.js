@@ -79,7 +79,7 @@
     });
 
     // Mobile dropdown (Insights > Rules/Thoughts) taps to expand instead of hover
-    document.querySelectorAll(".has-dropdown > a").forEach(function (link) {
+    document.querySelectorAll(".has-dropdown > .nav-item-row > a").forEach(function (link) {
       link.addEventListener("click", function (e) {
         if (window.innerWidth <= 760) {
           var parent = link.parentElement;
@@ -93,7 +93,7 @@
     });
 
     // Close mobile nav when a real link (not a dropdown toggle) is tapped
-    nav.querySelectorAll("a:not(.has-dropdown > a)").forEach(function (link) {
+    nav.querySelectorAll("a:not(.has-dropdown > .nav-item-row > a)").forEach(function (link) {
       link.addEventListener("click", function () {
         nav.classList.remove("open");
       });
