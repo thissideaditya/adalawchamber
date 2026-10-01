@@ -133,6 +133,7 @@ body.disclaimer-active > *:not(.disclaimer-overlay) { filter: blur(6px); }
   border: 1px solid var(--gold-500);
   border-radius: var(--radius-md);
   padding: clamp(1.75rem, 5vw, 2.75rem);
+  padding-top: 0rem;
   box-shadow: 0 30px 80px -20px rgba(0,0,0,.55);
 }
 .disclaimer-card .crest { width: 7rem; }
