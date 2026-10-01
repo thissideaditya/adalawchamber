@@ -79,21 +79,28 @@
     });
 
     // Mobile dropdown (Insights > Rules/Thoughts) taps to expand instead of hover
-    document.querySelectorAll(".has-dropdown > .nav-item-row > a").forEach(function (link) {
+    document.querySelectorAll(".has-dropdown a").forEach(function (link) {
+      var parent = link.closest(".has-dropdown");
+      var isTrigger = parent && parent.querySelector(".dropdown") &&
+        !parent.querySelector(".dropdown").contains(link);
+      if (!isTrigger) return; // this <a> is one of the dropdown's own links, not the trigger
+
       link.addEventListener("click", function (e) {
         if (window.innerWidth <= 760) {
-          var parent = link.parentElement;
-          var hasChildren = parent.querySelector(".dropdown");
-          if (hasChildren) {
-            e.preventDefault();
-            parent.classList.toggle("open");
-          }
+          e.preventDefault();
+          parent.classList.toggle("open");
         }
       });
     });
 
     // Close mobile nav when a real link (not a dropdown toggle) is tapped
-    nav.querySelectorAll("a:not(.has-dropdown > .nav-item-row > a)").forEach(function (link) {
+    nav.querySelectorAll(".dropdown a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        nav.classList.remove("open");
+      });
+    });
+// Close mobile nav when a top-level link with no dropdown is tapped
+    nav.querySelectorAll(".main-nav > ul > li:not(.has-dropdown) > a").forEach(function (link) {
       link.addEventListener("click", function () {
         nav.classList.remove("open");
       });
