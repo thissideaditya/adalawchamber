@@ -663,6 +663,10 @@ body.disclaimer-active .floating-contact { display: none; }
   .has-dropdown .dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; padding-left: .75rem; display: none; }
   .has-dropdown.open .dropdown { display: block; }
   .nav-toggle { display: flex; }
+  .site-header .container { height: auto; padding: .75rem 1rem; }
+  .brand img { height: 3.2rem; width: 3.2rem; }
+  .brand-text strong { font-size: 1rem; }
+  .brand-text span { font-size: .55rem; }
   .topbar .container { justify-content: center; text-align: center; }
   .grid--3, .grid--4, .team-grid, .post-grid, .grid--2, .stat-row { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
