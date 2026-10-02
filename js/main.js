@@ -138,6 +138,19 @@
     initDisclaimer();
   });
 
+  /* -------------------------------------------------------------
+    5. READ MORE / READ LESS TOGGLES (Practice Areas detail lists)
+  ------------------------------------------------------------- */
+  document.querySelectorAll(".read-more-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var list = btn.previousElementSibling;
+      var isOpen = btn.getAttribute("aria-expanded") === "true";
+      list.hidden = isOpen;
+      btn.setAttribute("aria-expanded", String(!isOpen));
+      btn.textContent = isOpen ? "Read More" : "Read Less";
+    });
+  });
+
   // Nav toggling, active-link highlighting, and the footer year all
   // need the real header/footer markup in the DOM first — which
   // partials.js injects asynchronously — so they run off this event

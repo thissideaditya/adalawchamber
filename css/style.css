@@ -669,8 +669,8 @@ body.disclaimer-active .floating-contact { display: none; }
   .has-dropdown.open .dropdown { display: block; }
   .nav-toggle { display: flex; }
   .site-header .container { height: auto; padding: .75rem 1rem; }
-  .brand img { height: 3.2rem; width: 3.2rem; }
-  .brand-text strong { font-size: 1rem; }
+  .brand img { height: 4.5rem; width: 4.5rem; }
+  .brand-text strong { font-size: 0.75rem; }
   .brand-text span { font-size: .55rem; }
   .topbar .container { justify-content: center; text-align: center; }
   .grid--3, .grid--4, .team-grid, .post-grid, .grid--2, .stat-row { grid-template-columns: 1fr; }
@@ -733,3 +733,10 @@ body.disclaimer-active .floating-contact { display: none; }
 @media (max-width: 760px) {
   .header-social { display: none; } /* keep the mobile header uncluttered; footer still carries the icons */
 }
+
+.read-more-toggle {
+  background: none; border: none; padding: 0; margin-top: .9rem;
+  font-size: .85rem; font-weight: 700; color: var(--green-800);
+  cursor: pointer;
+}
+.read-more-toggle:hover { color: var(--gold-700); text-decoration: underline; }
