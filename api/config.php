@@ -19,7 +19,7 @@
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'u925204098_adalawdatabase');
 define('DB_USER', 'u925204098_adalawusername');
-define('DB_PASS', 'adalawChambers@DB1');
+define('DB_PASS', 'adalawchambers@DB1');
 // ====================================================================
 
 // A random secret used only once, by api/setup-admin.php, to create
