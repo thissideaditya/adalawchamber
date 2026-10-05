@@ -266,7 +266,7 @@ body.disclaimer-active > *:not(.disclaimer-overlay) { filter: blur(6px); }
   background: var(--white); border: 1px solid var(--line); border-left: 3px solid var(--gold-500);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   padding: 2.1rem 2.2rem; min-height: 160px; height: 100%;
-  display: flex; flex-direction: column; justify-content: center;
+  display: flex; flex-direction: column; justify-content: flex-start;
   transition: transform .25s var(--ease), box-shadow .25s var(--ease);
 }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
@@ -275,7 +275,7 @@ body.disclaimer-active > *:not(.disclaimer-overlay) { filter: blur(6px); }
 .card p { color: var(--ink-700); font-size: 1rem; line-height: 1.6; margin-bottom: 0; }
 
 /* Optional icon medallion for cards — pair with .card-head to sit icon + title side by side */
-.card-head { display: flex; align-items: center; gap: .9rem; margin-bottom: .7rem; }
+.card-head { display: flex; align-items: flex-start; gap: .9rem; margin-bottom: .7rem; }
 .card-icon {
   width: 42px; height: 42px; flex-shrink: 0; border-radius: 50%;
   background: var(--cream-100); display: flex; align-items: center; justify-content: center;
