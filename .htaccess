@@ -36,3 +36,9 @@
   RewriteCond %{QUERY_STRING} ^slug=(.*)$
   RewriteRule ^post\.html$ /post.php?slug=%1 [R=301,L]
 </IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|jpg|jpeg|png|webp|gif|svg)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
