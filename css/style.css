@@ -310,7 +310,10 @@ body.disclaimer-active > *:not(.disclaimer-overlay) { filter: blur(6px); }
 /* ---------------------------------------------------------------
    TEAM
 --------------------------------------------------------------- */
-.team-grid { grid-template-columns: repeat(3, 1fr); }
+.team-grid:has(> .team-card:only-child) {
+  grid-template-columns: minmax(0, 360px);
+  justify-content: center;
+}
 .team-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; }
 .team-photo { aspect-ratio: 1/1; overflow: hidden; background: var(--green-900); }
 .team-photo img { width: 100%; height: 100%; filter: grayscale(15%); transition: filter .3s var(--ease), transform .4s var(--ease); }
