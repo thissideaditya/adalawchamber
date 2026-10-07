@@ -14,7 +14,6 @@
     { name: "Ishu Bharti Jha", role: "MANAGER · ASSOCIATE", img: "/assets/images/ishuImage.webp" },
     { name: "Neelam ", role: "Advocate", img: "/assets/images/neelamImage.webp" },
     { name: "Anshu Kumar Upadhyay", role: "ADVOCATE", img: "/assets/images/anshuImage.webp" },
-    { name: "Dharamveer Singh Chauhan", role: "ACCOUNTS · Tax PROFESSIONAL", img: "/assets/images/dharamveerImage.webp" },
     { name: "CA (Dr.) Sunil Goel", role: "CONSULTANT · CONTRACTS, COMPLIANCE & INVESTIGATIONS", img: "/assets/images/sunilImage.webp" },
     { name: "Saurabh Sharma", role: "CONSULTANT · BANKING & FINANCIAL SERVICES", img: "/assets/images/saurabhImage.webp" },
     { name: "Anuj Dalmia", role: "CONSULTANT · START-UP & TRANSACTION ADVISORY", img: "/assets/images/anujImage.webp" },
@@ -30,7 +29,7 @@
   function render() {
     var mount = document.getElementById("experts-grid");
     if (!mount) return;
-    var HOME_LIMIT = 3;
+    var HOME_LIMIT = 1;
     var onHome = mount.hasAttribute("data-limit-home");
     var list = onHome ? EXPERTS.slice(0, HOME_LIMIT) : EXPERTS;
     mount.innerHTML = list.map(function (e) {
